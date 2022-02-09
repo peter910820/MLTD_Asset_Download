@@ -18,5 +18,5 @@ fclose($file);
 $text = MessagePack::unpack($content);
 foreach($text[0] as $filename => $f){
     $getList->show($filename);
-    $getList->download_assets($f[1]);
+    $getList->download_assets($list[0],$f[1]);
 }

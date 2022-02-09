@@ -19,8 +19,8 @@ class getList{
         return $list;
     }
 
-    function download_assets($fileroute){
-        $url = "https://td-assets.bn765.com/296340/production/2018/Android/$fileroute";
+    function download_assets($version,$fileroute){
+        $url = "https://td-assets.bn765.com/$version/production/2018/Android/$fileroute";
         $file = fopen($url, "rb");
         $unity3D = "";
         while (!feof($file)) {
